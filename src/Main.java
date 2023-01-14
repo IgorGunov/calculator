@@ -40,7 +40,7 @@ public class Main {
             }
         }
 
-        if (aArab == false && bArab == false) {
+        if (!aArab && !bArab) {
             try {
                 Integer.parseInt(array[0]);
                 Integer.parseInt(array[2]);
@@ -57,7 +57,7 @@ public class Main {
             throw new Exception(" числа выходят за допустимую границу");
         }
 
-        if (aArab && bArab && (a < b)) {
+        if (aArab && bArab && (operation(a, b, array[1]) < 0)) {
             throw new Exception("в римской системе нет отрицательных чисел");
         }
 
